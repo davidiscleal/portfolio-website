@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Projects – David's Portfolio" description="Projects by David Leal.">
+  <Fragment slot="head">
+    <!-- Meta redirect for users without JavaScript -->
+    <meta http-equiv="refresh" content="0; url=/projects" />
+  </Fragment>
+
+  <script>
+    // Instant client-side redirect (faster)
+    if (typeof window !== 'undefined') {
+      window.location.replace('/projects');
+    }
+  </script>
+
+  <section class="py-24">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold mb-3">Redirecting to Projects…</h1>
+      <p class="text-gray-600">
+        If you’re not redirected automatically,
+        <a class="text-blue-600 hover:underline" href="/projects">click here</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+
+
+
+
+
+

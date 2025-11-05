@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Resume • David Leal"
+  description="View or download my resume to learn more about my experience, skills, and professional background."
+>
+  <!-- Full-width green banner -->
+  <section class="accent-hero py-12 text-center border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+        <span class="text-[color:var(--accent)]">My Resume</span>
+      </h1>
+      <p class="mx-auto text-gray-700 text-[1.05rem] md:text-lg leading-tight max-w-none">
+        Focused on embedded systems, controls, and intelligent design.
+      </p>
+
+
+      <!-- Skill tags -->
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <span class="skill-pill">Embedded Systems</span>
+        <span class="skill-pill">PCB Design</span>
+        <span class="skill-pill">IoT Networking</span>
+        <span class="skill-pill">Controls</span>
+        <span class="skill-pill">Data Acquisition</span>
+        <span class="skill-pill">MATLAB</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">C/C++</span>
+        <span class="skill-pill">ROS2</span>
+        <span class="skill-pill">FastAPI</span>
+        <span class="skill-pill">KiCad</span>
+        <span class="skill-pill">SolidWorks</span>
+        <span class="skill-pill">Linux</span>
+        <span class="skill-pill">Git</span>
+      </div>
+
+      <!-- Download Button -->
+      <a
+        href="/resume.pdf"
+        download
+        class="mt-10 inline-flex items-center rounded-md bg-[color:var(--accent)] px-6 py-3 text-base font-medium text-white shadow-md transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] focus:ring-offset-2"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Download PDF
+      </a>
+    </div>
+  </section>
+
+  <!-- Resume Viewer -->
+  <section class="py-12 sm:py-16 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+        <div class="aspect-[8.5/11] bg-gray-50">
+          <iframe
+            src="/resume.pdf"
+            class="w-full h-full border-0"
+            title="Resume PDF"
+            loading="lazy"
+          >
+            <p class="p-8 text-center text-gray-600">
+              Your browser does not support PDFs.
+              <a href="/resume.pdf" download class="text-[color:var(--accent)] hover:underline">
+                Download the PDF instead
+              </a>.
+            </p>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-600">
+          Having trouble viewing the PDF? Download it using the button above.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Match project page hero */
+    .accent-hero {
+      @apply bg-gradient-to-r from-emerald-50 to-green-50;
+    }
+
+    /* Light-green pill styling consistent with projects page */
+    .skill-pill {
+      @apply rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-800;
+    }
+  </style>
+</BaseLayout>
+
+
+

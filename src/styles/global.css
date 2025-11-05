@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Forest-green theme tokens ---------- */
+@layer base {
+  :root {
+    --accent: #2E6F40;      /* forest green */
+    --accent-dark: #245a33; /* hover/active */
+    --accent-50: #eaf3ee;   /* very light tint */
+  }
+
+  /* Keep default neutral borders simple (no var here to avoid Tailwind error) */
+  * { @apply border-gray-200; }
+
+  html { scroll-behavior: smooth; }
+  body { @apply min-h-screen flex flex-col bg-white text-gray-900 antialiased; }
+
+  /* Accessible focus ring in accent color */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-offset-2;
+    --tw-ring-color: var(--accent);
+  }
+
+  /* Text selection */
+  ::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+
+  /* Skip link helpers (unchanged) */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+  }
+  .sr-only:focus {
+    position: static; width: auto; height: auto; padding: 0.5rem 1rem; margin: 0;
+    overflow: visible; clip: auto; white-space: normal;
+  }
+  .not-sr-only {
+    position: static; width: auto; height: auto; padding: 0; margin: 0;
+    overflow: visible; clip: auto; white-space: normal;
+  }
+}
+
+/* ---------- Reusable accent utilities ---------- */
+@layer components {
+  .btn-accent {
+    @apply inline-flex items-center rounded-md px-4 py-2 text-sm font-medium text-white transition;
+    background: var(--accent);
+  }
+  .btn-accent:hover { background: var(--accent-dark); }
+  .btn-accent:focus-visible { @apply ring-2 ring-offset-2; }
+
+  .badge-accent {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium border;
+    background: var(--accent-50);
+    color: var(--accent);
+  }
+
+  .link-accent { color: var(--accent); }
+  .link-accent:hover { color: var(--accent-dark); }
+
+  .accent-hero {
+    @apply bg-gradient-to-r border;
+    background-image: linear-gradient(to right, var(--accent-50), #ecfdf5);
+  }
+}
+
+/* ---------- Convenience overrides to turn old “blue” classes green ---------- */
+@layer utilities {
+  .bg-blue-600 { background-color: var(--accent) !important; }
+  .hover\:bg-blue-700:hover { background-color: var(--accent-dark) !important; }
+  .ring-blue-500 { --tw-ring-color: var(--accent) !important; }
+  .text-blue-600 { color: var(--accent) !important; }
+  .hover\:text-blue-700:hover { color: var(--accent-dark) !important; }
+  .bg-blue-50 { background-color: var(--accent-50) !important; }
+}
+
+

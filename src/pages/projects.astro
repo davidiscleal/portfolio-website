@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import projectsData from '../../content/projects.json';
+
+const projects = projectsData;
+export const prerender = true;
+---
+
+<BaseLayout
+  title="My Projects • David Leal"
+  description="A collection of projects I've worked on, featuring various technologies and solutions."
+>
+  <!-- Welcome header -->
+  <section class="accent-hero py-12 text-center border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+        Hi, I’m <span class="text-[color:var(--accent)]">David Leal!</span>
+      </h1>
+      <p class="text-lg text-gray-700 mb-6">
+        Welcome to my portfolio! Feel free to look around! I’m an senior electrical engineering student passionate about designing reliable, data-driven systems.
+      </p>
+      <a href="/resume" class="btn-accent">
+        View Resume
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects grid -->
+  <section class="py-12 sm:py-16 lg:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <h2 class="mb-4 text-4xl sm:text-5xl font-bold text-gray-900">My Projects</h2>
+        <p class="mx-auto max-w-2xl text-xl text-gray-600">
+          A collection of projects I've worked on, featuring various technologies and solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <article
+            key={project.id}
+            class="flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"
+          >
+            <!-- Card image/placeholder with green gradient -->
+            <div class="relative aspect-video overflow-hidden bg-gradient-to-br from-emerald-100 to-green-200">
+              {project.thumbnail ? (
+                <img
+                  src={project.thumbnail}
+                  alt={`${project.title} thumbnail`}
+                  loading="lazy"
+                  class="h-full w-full object-cover"
+                  width="400"
+                  height="225"
+                />
+              ) : (
+                <div class="flex h-full w-full items-center justify-center">
+                  <svg class="h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              )}
+            </div>
+
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="mb-2 text-xl font-bold text-gray-900">{project.title}</h3>
+              <p class="mb-4 flex-1 text-gray-600">{project.description}</p>
+
+              <!-- Tech pills -->
+              <div class="mb-4 flex flex-wrap gap-2">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <!-- Links -->
+              <div class="flex gap-3 border-t border-gray-200 pt-4">
+                {project.links?.live && (
+                  <a
+                    href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-accent"
+                  >
+                    Live Demo
+                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+
+                {project.links?.docs && (
+                  <a
+                    href={project.links.docs}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center rounded-md bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-800 transition-colors hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] focus:ring-offset-2"
+                  >
+                    Docs
+                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                  </a>
+                )}
+
+                {project.links?.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center rounded-md bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                  >
+                    GitHub
+                    <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+
