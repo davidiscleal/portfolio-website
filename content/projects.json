@@ -4,41 +4,36 @@
     "title": "MIL-STD Rocket Engine Control & Measurement System (Capstone)",
     "description": "A fully instrumented rocket engine test stand designed for MIL-STD compliance, enabling safe, repeatable, and standards-driven engine testing. Integrates automated thrust measurement, combustion chamber sensing, mass flow control, and ignition sequencing through a modular control and data acquisition system.",
     "tech": ["Rocket Propulsion", "Instrumentation", "Data Acquisition", "Embedded Systems", "AS9100", "Control Systems"],
-    "thumbnail": "/src/assets/projects/rocketengine.webp",
-    "links": {
-      
-    }
+    "thumbnail": "/projects/rocketengine.webp",
+    "links": {}
   },
   {
     "id": "esp32heart",
     "title": "Socially Assistive Robot – ESP32 Heart Monitor (IoT)",
     "description": "IoT-enabled biometric monitoring system using an ESP32 microcontroller to collect heart rate and temperature data for socially assistive robotics. Streams live vitals to a cloud dashboard through Blynk, supporting remote health insights and emotion-responsive interaction.",
     "tech": ["ESP32", "Biomedical", "Sensor Integration", "Embedded C", "Blynk", "IoT"],
-    "thumbnail": "/src/assets/projects/esp32-heart.webp",
-    "links": {
-      
-    }
+    "thumbnail": "/projects/esp32-heart.webp",
+    "links": {}
   },
   {
     "id": "roboracer",
     "title": "RoboRacer Autonomous Race Car (ROS2 + LiDAR)",
     "description": "ROS2-based autonomous vehicle capable of real-time LiDAR mapping, sensor fusion, and path planning on a Jetson Orin platform. Implements modular perception and control nodes for high-speed navigation and obstacle avoidance in dynamic environments.",
     "tech": ["ROS2", "LiDAR", "Jetson Orin", "Path Planning", "Linux"],
-    "thumbnail": "/src/assets/projects/roboracer.webp",
-    "links": {
-      
-    }
+    "thumbnail": "/projects/roboracer.webp",
+    "links": {}
   },
   {
     "id": "disasteralert",
-    "title": "Deployable Disaster Alert System ( ESP32 + FastAPI)",
-    "description": "Edge-based environmental monitoring and alert network developed on a Raspberry Pi using Flask REST APIs. Collects live sensor data and automatically issues localized web-based disaster alerts, offering a rapid, low-cost framework for community resilience.",
-    "tech": ["ESP32", "ESP-NOw", "IoT Network", "Python", "Data Analysis"],
-    "thumbnail": "/src/assets/projects/disasteralert.webp",
+    "title": "Deployable Disaster Alert System (ESP32 + FastAPI)",
+    "description": "Distributed environmental sensing network using ESP32 sensor nodes (ESP-NOW) that stream to a FastAPI backend, which ingests CSV data and publishes a web dashboard for localized alerting.",
+    "tech": ["ESP32", "ESP-NOW", "IoT Network", "Python", "FastAPI", "Data Analysis"],
+    "thumbnail": "/projects/disasteralert.webp",
     "links": {
       "github": "https://github.com/davidiscleal/Corpus-Christi-Weather-Station"
     }
   }
 ]
+
 
 
