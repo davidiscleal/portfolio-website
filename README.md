@@ -18,31 +18,4 @@ A minimal, static portfolio website built with Astro and TailwindCSS, optimized 
 - `/resume` - PDF resume viewer with download button
   
 
-## Local Development
-
-### Prerequisites
-
-- Node.js 18+ and npm
-
-### Setup
-
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Start the development server:
-```bash
-npm run dev
-```
-
-3. Open your browser to `http://localhost:4321`
-
-### Development Commands
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-
-
 

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+export const prerender = true;
+---
+
+<BaseLayout
+  title="About • David Leal"
+  description="Embedded systems and instrumentation engineer developing intelligent hardware at the intersection of electronics and automation."
+>
+  <!-- Hero / Summary -->
+  <section class="accent-hero py-14 border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+        Hi! Welcome to my Portfolio. I'm <span class="text-[color:var(--accent)]">David Leal!</span>
+      </h1>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        I develop embedded and connected systems that bridge the physical and digital, from IoT health monitors and autonomous robotics 
+        to MIL-STD instrumentation for propulsion testing. My work focuses on precision, reliability, and real-world performance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills and Focus Areas -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4 space-y-10">
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Core Competencies</h2>
+        <ul class="list-disc pl-6 text-gray-800 space-y-1">
+          <li>Embedded systems (ESP32 / C / C++) and real-time control</li>
+          <li>Sensor integration, instrumentation, and data acquisition</li>
+          <li>IoT connectivity — Blynk, FastAPI, and wireless telemetry</li>
+          <li>PCB design, signal conditioning, and system testing</li>
+          <li>System automation, scripting, and reliability engineering</li>
+        </ul>
+      </div>
+
+  <!-- Education -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Education</h2>
+        <p class="text-gray-800">
+          <strong>Bachelor of Science in Electrical Engineering (BSEE)</strong><br />
+          Texas A&M University–Corpus Christi<br />
+          <span class="text-gray-700">Expected Graduation: May 2026 • GPA: 3.7</span><br />
+          <span class="text-gray-700 italic">Minor in Applied Mathematics</span>
+        </p>
+      </div>
+
+  <!-- Contact -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-3">Contact</h2>
+        <p class="text-gray-800">
+          The fastest way to reach me is through the contact section in the footer.
+          You can also view my <a class="text-[color:var(--accent)] underline underline-offset-4" href="/resume">resume</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

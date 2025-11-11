@@ -32,6 +32,32 @@
     "links": {
       "github": "https://github.com/davidiscleal/Corpus-Christi-Weather-Station"
     }
+  },
+  {
+    "id": "ieee-ethics-3rd",
+    "title": "IEEE Region 5 Student Ethics Competition (3rd Place)",
+    "description": "Argued ethical responses to engineering scenarios involving public safety and professional responsibility; delivered a concise IEEE Ethical standards-aligned rationale and handled judge Q&A.",
+    "tech": ["IEEE Ethics", "Communication", "Professional Responsibility", "Teamwork"],
+    "thumbnail": "/projects/ieee-ethics.webp",
+    "links": {}
+  },
+  {
+    "id": "raspberrypi-portfolio",
+    "title": "Portfolio Website (Self-Hosted on Raspberry Pi 4)",
+    "description": "Designed and deployed a self-hosted portfolio website on a Raspberry Pi 4 using Astro and Nginx. Automated deployment through Git and built for speed, reliability, and full control",
+    "tech": ["Astro", "TypeScript", "Node.js", "Raspberry Pi 4", "Nginx", "Git"],
+    "thumbnail": "/projects/raspi-portfolio.webp",
+    "links": {
+      "github": "https://github.com/davidiscleal/portfolio-website"
+    }
+  },
+  {
+    "id": "pioneer-for-cheniere-2nd",
+    "title": "Pioneer for Cheniere — Didion Milling Crisis (2nd Place)",
+    "description": "Competition case analysis of the Didion Milling explosion focusing on process safety, dust hazard analysis, and prevention strategies. Built a structured root-cause analysis and presented mitigation plans under time constraints.",
+    "tech": ["Process Safety", "Root-Cause Analysis", "Presentation", "Teamwork"],
+    "thumbnail": "/projects/didion-milling.webp",
+    "links": {}
   }
 ]
 
